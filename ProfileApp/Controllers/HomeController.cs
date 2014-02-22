@@ -13,6 +13,7 @@ namespace ProfileApp.Controllers
 
         public ActionResult Index()
         {
+            //Test comment.
             return View();
         }
 
