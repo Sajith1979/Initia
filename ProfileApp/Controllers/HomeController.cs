@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ProfileApp.Models;
 
 namespace ProfileApp.Controllers
 {
@@ -13,8 +15,13 @@ namespace ProfileApp.Controllers
 
         public ActionResult Index()
         {
+            
+            PageVariables pVariables = new PageVariables();
+            pVariables.Environment = ConfigurationManager.AppSettings["Environment"].ToString();
+            pVariables.HarborKey = ConfigurationManager.AppSettings["MY_HARBOR_KEY"].ToString();
+            pVariables.TestKey = ConfigurationManager.AppSettings["TEST_KEY"].ToString();
             //Test comment.
-            return View();
+            return View("VariableView", pVariables);
         }
 
     }

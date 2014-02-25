@@ -1,0 +1,11 @@
+﻿@model ProfileApp.Models.PageVariables
+
+@{
+    ViewBag.Title = "VariableView";
+}
+
+<h2>Welcome to VariableView</h2>
+
+<p>Environment Name : @Model.Environment.ToString()</p>
+<p>Harbor Key       : @Model.HarborKey.ToString()</p>
+<p>Test Key         : @Model.TestKey.ToString()</p>
