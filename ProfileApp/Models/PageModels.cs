@@ -39,5 +39,11 @@ namespace ProfileApp.Models
             get;
             set;
         }
+
+        public string UniqueKey
+        {
+            get;
+            set;
+        }
     }
 }

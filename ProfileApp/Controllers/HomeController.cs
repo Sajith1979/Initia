@@ -20,6 +20,7 @@ namespace ProfileApp.Controllers
             pVariables.Environment = ConfigurationManager.AppSettings["Environment"].ToString();
             pVariables.HarborKey = ConfigurationManager.AppSettings["MY_HARBOR_KEY"].ToString();
             pVariables.TestKey = ConfigurationManager.AppSettings["TEST_KEY"].ToString();
+            pVariables.UniqueKey = ConfigurationManager.AppSettings["UNIQUE_KEY"].ToString();
             //Test comment.
             return View("VariableView", pVariables);
         }
